@@ -1,0 +1,50 @@
+1/Absolute Path : an absolute path specifies the full path to a file or directory , starting from the root 
+dir , always begins with / .
+
+2/ Relative path : a relative path specifies the location of a file or dir relative to the current working 
+dir , it does no start with / . ( . current dir / .. parent dir )
+
+3/ pavucontrol :
+pavucontrol (PulseAudio Volume Control) is a graphical application for managing and configuring audio settings
+ in systems using PulseAudio, the default sound server on most Linux distributions, including Kali Linux.
+
+It provides fine-grained control over audio settings, including volume, device selection,
+ and application-specific audio routing.
+
+4 /alsamixer :  
+alsamixer is a graphical sound mixer program for the ALSA (Advanced Linux Sound Architecture) sound system
+ commonly used in Linux distributions like Kali Linux. It provides a terminal-based interface to manage and control
+ audio devices and their settings.
+
+
+
+5/ file.sh ;
+this is typically a shell script that are a plain text files that contain a series of commands written 
+for the shell (command line interpreter) using language like Bash and Dash 
+
+6/ How to change the boot order in the grub menu :
+First ; make a copy of the boot.cfg file by typing : sudo cp /boot/grub/grub.cfg / boot/grub/grub.cfg.cp
+Second; open the file using a txt-editor : sudo nano /boot/grub/grub.cfg
+Then ; Change the (set default) option from 0 to the order you wish .... you also delete some things or change
+the boot time;....  
+
+7/ How to extract file both(file.rar and file.zip)
+- install unzip and unrar : apt-get install unzip && apt-get install unrar (if it's not working just update)
+- unrar : unrar x file.rar (to extract files with full path )
+	  unrar e file.rar (to extract files without archieved path )
+- unzip : unzip file.zip
+
+8/ How to change the grub_image : 
+IMPORTANT : We need to type of images , one with a transparente square in the middle and one normal .
+First download the zip images .
+Second check that the names are correct ,you should have 2 transparentes with names: 
+-grub-4x3.png .
+-grub-16x9.png .
+and one normale : 
+- background.png .
+then copy the 2 transparentes in the /themes/kali : cp -r grub-4x3.png  /boot/grub/themes/kali 
+						    cp -r grub-16x9.png /boot/grub/themes/kali
+	
+After that copy the main one to this grub : cp -r background.png /boot/grub
+Then ; you should update the grub ; sudo update-grub , then reboot the computer...
+

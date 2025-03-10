@@ -1,0 +1,43 @@
+Structure of -rw-rw-r--:
+
+    - (1st character): File type
+        -: Regular file
+        d: Directory
+        l: Symbolic link
+        c: Character device
+        b: Block device
+
+    rw- (2nd to 4th characters): Permissions for the owner
+        r: Read permission (owner can read the file).
+        w: Write permission (owner can modify the file).
+        -: No execute permission.
+
+    rw- (5th to 7th characters): Permissions for the group
+        r: Read permission (group members can read the file).
+        w: Write permission (group members can modify the file).
+        -: No execute permission.
+
+    r-- (8th to 10th characters): Permissions for others
+        r: Read permission (others can read the file).
+        -: No write or execute permission.
+
+Example Breakdown of -rw-rw-r--:
+
+    -: It's a regular file.
+    rw- (owner): The owner can read and write the file.
+    rw- (group): Members of the group can read and write the file.
+    r-- (others): Others can only read the file.
+
+Summary Table:
+Character Position	Meaning
+1	File type
+2-4	Owner permissions
+5-7	Group permissions
+8-10	Others (world) permissions
+Additional Notes:
+
+    Permissions are represented numerically as well:
+        r = 4, w = 2, x = 1, - = 0
+        So rw- translates to 4+2=6.
+        This file would have permissions 664 (Owner: 6, Group: 6, Others: 4).
+

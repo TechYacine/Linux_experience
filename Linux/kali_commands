@@ -1,0 +1,79 @@
+kali commends: 
+
+1- mkdir : make a folder
+2- cd : Enter a folder
+3- ls : show what is inside
+4- sudo su : run as admin
+5- rm -d -or- -r  <name> : dlt the folder (-d will not delete if the folder is full ), make a space 
+if u want to delete 2 files . 
+-if one of them does not exist , an error will appear , so we use ( -f ) to suppress the error
+-if u want confirmation before deleting just use (-i) 
+
+6- pwd : show your location
+7- onboard : visual_keyboard
+8- ifonfig : to see the ip and mac adress
+9- dpkg-reconfigure locales : change the location of the User (It allows you to select or change the system locale
+ (e.g., language, character encoding, or region settings).
+10- tar -xvf : extraire.xz
+
+This command is used to extract compressed files packaged with the tar utility and compressed using the xz algorithm.
+
+Command breakdown:
+
+    tar: The tape archive tool, used for compressing and extracting files.
+    -x: Stands for extract (used to unpack files).
+    -v: Verbose mode, which lists the files being extracted in the terminal.
+
+    -f: Specifies the file name of the archive to be extracted.
+exp : first decompressed and then extract .....
+tar -xvf archive.tar.xz
+
+
+11- setxkbmap fr : for AZERTY and ,      us: for QWERTY
+12- mv l.txt M(dir)/r.txt : move a file to a dir ( you can change the name by writing r instead of l :). )
+13- touch : to creat a file 
+14 - touch .m.txt : to creat a hidden file 
+15 - rm .m.txt : to remove any file 
+16 - whatis <order> : show you what a command does 
+17 - ls -l : show files and dir permissions .
+18 - -rw-rw-r-- : notation that represents the file permission .
+
+Note : you can combine commands , I just try it and it works :=) like (ls -a -l ) ; this command
+will show you all the file and dir -hidden or not- their permissions .
+														
+									
+19 - chmod <binary> <fileName> : will chage the file or dir permission: 
+owner = 7 read : 1 write : 1, execute : 1
+group = 5 read : 1 write : 0, execute : 1
+all = 5	read : 1 write : 0, execute : 1
+so in decimal we will write 755 to give permissions to the users
+				
+20- head <fileName> : show the biginning of a file
+21- tail <fileName> : show the ending of a file 
+22- cat <fileName>  : show all the file .									  
+23 - wc(word count) -w -l -c :(put either on of them or None and it will) show you the number of word, line, char, or all of them in the file.		
+24 - grep "WORD" <fileName> : it will show you all the line this word appears in .
+
+25 - cut -c 1,2,3 or 1-3 <fileName> : this command will show you the first word or the first two words in a file
+(select specific char from each line.) .  
+     cut -d ":" -f 1 <fileName>: this command will cut the txte in : and then show the first part in each line.
+(extract fields (columns) whe data is delimited be specific char.)
+                                
+26 - > <fileName> : this command help you to store the output in a newfile .
+27 - | : The | (pipe) operator passes the output of the command on the left side as the input of the command
+on the right .
+28 - && : this will combine to commands , ensure that the second command will only run if the first command runs
+
+
+Note : 
+cat test1.txt | grep "[a-zA-Z]" > test2.txt : will earase the space in such file and put in new file 
+
+29 - echo "hello" > test.txt : will print hello in the file 
+	  "hi"   >> test.text : will append hi to the test.txt 
+	  
+30- gnome-screenshot -a : to take screen shots LOL.
+31- bash file.sh or ./file.sh (if it si excutable) : just to run a shell script .
+32 - x=4 , y="hello" : just a delclaration of the vars
+33 - echo $x $y : to write 2 vars separated with space .
+34 - read var; : asking the user to input the value of the var .
+note : be pricise on spaces and point commas . 

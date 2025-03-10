@@ -1,0 +1,5 @@
+kali
+names
+permission
+
+it is the output of ls | grep "n" | cut -d _ -f1 > test.txt 
